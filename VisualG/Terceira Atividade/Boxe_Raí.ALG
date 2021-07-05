@@ -2,75 +2,85 @@ Algoritmo "LutadorBoxe"
 
 // Autor(a)    : Raíssa Bespalec
 
-Var
-// Seção de Declarações das variáveis 
+var
 peso: real
-pesado,cruzador,meio_pesado,super_medio,medio,super_meio_medio,meio_medio:logico
-super_leve,leve,super_pena,pena,super_galo,galo,super_mosca,mosca:logico
-mosca_ligeiro,palha,palha_ligeiro : logico
-Inicio
-escreval("Qual é o seu peso?")
+
+inicio
+//entrada
+
+escreval("Digite o seu peso em KG:")
 leia(peso)
 
-pesado <- ((peso > 90.72 ))
+se ((peso=46.27)) entao
+   escreval("O lutador está na categoria Peso Palha Ligeiro")
+fimse
 
-cruzador <- ((peso = 90.72))
+se (((peso>46.27) e (peso <= 47.63))) entao
+   escreval("O lutador está na categoria Peso Palha")
+fimse
 
-meio_pesado<- ((peso >= 79.38) e (peso < 90.72))
+se (((peso>47.63) e (peso <= 48.99))) entao
+   escreval("O lutador está na categoria Peso Mosca Ligeiro")
+fimse
 
-super_medio<- ((peso >= 76.2) e (peso < 79.38))
+se (((peso>48.99) e (peso <= 50.35))) entao
+   escreval("O lutador está na categoria Peso Mosca")
+fimse
 
-medio <-  ((peso >= 73.03) e (peso < 76.2))
+se (((peso>50.35) e (peso <= 51.71))) entao
+   escreval("O lutador está na categoria Peso Super Mosca")
+fimse
 
-super_meio_medio <- ((peso >= 69.85) e (peso < 73.03))
+se (((peso>51.71) e (peso <= 53.52))) entao
+   escreval("O lutador está na categoria Peso Galo")
+fimse
 
-meio_medio <- ((peso >= 66.68) e (peso < 69.85))
+se (((peso>53.52) e (peso <= 55.34))) entao
+   escreval("O lutador está na categoria Peso Super Galo")
+fimse
 
-super_leve <- ((peso >= 63.5) e (peso < 66.68))
+se (((peso>55.34) e (peso <= 57.15))) entao
+   escreval("O lutador está na categoria Peso Pena")
+fimse
 
-leve <-((peso >= 61.23) e (peso < 63.5))
+se (((peso>57.15) e (peso <= 58.97))) entao
+   escreval("O lutador está na categoria Peso Super Pena")
+fimse
 
-super_pena <- ((peso >= 58.97) e (peso < 61.23))
+se(((peso>58.97) e (peso <= 61.23)))entao
+   escreval("O lutador está na categoria Peso Leve")
+fimse
 
-pena <- ((peso >= 57.15) e (peso < 58.97 ))
+se(((peso>61.23) e (peso <= 63.5)))entao
+   escreval("O lutador está na categoria Peso Super Leve")
+fimse
 
-super_galo <- ((peso >= 55.34) e (peso < 57.15))
+se(((peso>63.5) e (peso <= 66.68)))entao
+   escreval("O lutador está na categoria Peso Meio-Medio")
+fimse
 
-galo <- ((peso >= 53.52) e (peso < 55.34))
+se(((peso>66.68) e (peso <= 69.85)))entao
+   escreval("O lutador está na categoria Peso Super Meio-Medio")
+fimse
 
-super_mosca <- ((peso >= 51.71) e (peso < 53.52))
+se(((peso>69.85) e (peso <= 73.03)))entao
+   escreval("O lutador está na categoria Peso Medio")
+fimse
 
-mosca <- ((peso >= 50.35) e (peso > 51.71))
+se(((peso>73.03) e (peso <= 76.2)))entao
+   escreval("O lutador está na categoria Peso Super Medio")
+fimse
 
-mosca_ligeiro <- ((peso >= 48.99) e (peso < 50.35))
+se(((peso>76.2) e (peso <= 79.38)))entao
+   escreval("O lutador está na categoria Peso Meio Pesado")
+fimse
 
-palha <- ((peso >= 47.63) e (peso < 48.99))
+se(((peso>79.38) e (peso <= 90.72)))entao
+   escreval("O lutador está na categoria Peso Cruzador")
+fimse
 
-palha_ligeiro <- ((peso >= 46.27) e (peso < 47.63))
+se((peso>90.72))entao
+   escreval("O lutador está na categoria Peso Pesado")
+fimse
 
-
-
-escreval("Sua categoria é:")
-escreval("Pesado: ",pesado)
-escreval("Cruzador: ",cruzador)
-escreval("Meio pesado: ",meio_pesado)
-escreval("Super medio: ",super_medio)
-escreval("Medio: ",medio)
-escreval("Super meio medio: ",super_meio_medio)
-escreval("Meio medio: ",meio_medio)
-escreval("Super leve: ",super_leve)
-escreval("Leve: ",leve)
-escreval("Super pena: ",super_pena)
-escreval("Pena: ",pena)
-escreval("Super galo: ",super_galo)
-escreval("Galo: ",galo)
-escreval("Super mosca: ",super_mosca)
-escreval("Mosca: ",mosca)
-escreval("Mosca ligeiro: ",mosca_ligeiro)
-escreval("Palha: ",palha)
-escreval("Palha ligeiro: ",palha_ligeiro)
-
-
-
-
-Fimalgoritmo
+fimalgoritmo

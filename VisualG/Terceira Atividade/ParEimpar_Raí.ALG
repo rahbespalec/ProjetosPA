@@ -1,19 +1,22 @@
 Algoritmo "ParImpar"
 // Autor(a)    : Raíssa Bespalec
 
-Var
+var
 num: inteiro
-par, impar: logico
 
+inicio
+//Entrada de Dados
 
-Inicio
-escreval ("Digite um valor: ")
-Leia (num)
+escreval("Digite o número que deseja saber se é ímpar ou par:")
+leia(num)
 
-par <- (num mod 2)=0
-impar <- (num mod 2)=1
+se((num mod 2)=0)entao
 
-escreval ("Par: ", par)
-escreval ("Impar: ", impar)
+   escreval("Esse número é um número par.")
 
-Fimalgoritmo
+senao
+
+     escreval("Esse número é um número impar")
+
+fimse
+fimalgoritmo

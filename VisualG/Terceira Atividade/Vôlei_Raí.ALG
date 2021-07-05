@@ -4,23 +4,22 @@ Algoritmo "CompeticaoVolei"
 
 // Autor(a)    : Raíssa Bespalec
 
-Var
-// Seção de Declarações das variáveis 
-idade,altura: real
-pode_competir,n_competir: logico
+var
+idadeatl, alturaatl: real
 
-Inicio
-escreval("Quantos anos você tem?")
-leia(idade)
-escreval("Qual é a sua altura?")
-leia(altura)
+inicio
+//Entrada
+escreval("Você está dentro das qualificações para essa competição de Vôlei?")
 
-pode_competir <- ((idade >= 18) e (altura >=1.75))
-n_competir <- ((altura < 1.75) e (idade < 18))
+escreval("Digite a idade")
+leia(idadeatl)
+escreval("Digite a altura")
+leia(alturaatl)
 
-escreval("Pode competir: ",pode_competir)
-escreval("Não pode competir: ",n_competir)
+se((alturaatl >= 1.75)) e ((idadeatl >= 18)) entao
+   escreval("Você está dentro das pré-qualificações, pode se inscrever.")
+senao
+     escreval("Você não está dentro das pré-qualificações, é uma pena, tente novamente ano que vem.")
+fimse
 
-
-
-Fimalgoritmo
+fimalgoritmo

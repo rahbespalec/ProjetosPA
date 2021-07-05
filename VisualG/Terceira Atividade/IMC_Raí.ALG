@@ -1,35 +1,38 @@
 Algoritmo "IMC"
 // Autor(a)    : Raíssa Bespalec
 
-Var
-altura, peso : real
-imc: real
-abaixo, ideal, acima, ob1,ob2,ob3: logico
+var
+peso, altura, imc: real
 
-Inicio
-escreval("Qual a sua altura?")
+inicio
+//Entrada
+
+escreval("Digite seu peso (se necessário, utilize pontos invés de vírgulas)")
+leia(peso)
+escreval("Digite sua altura (se necessário, utilize pontos invés de vírgulas)")
 leia(altura)
 
-escreval("Qual seu peso?")
-leia(peso)
+imc <- peso/altura^2
 
-imc <-(peso/(altura*altura))
+se((imc<18.5))entao
+escreval("Você está abaixo do peso.")
+fimse
 
-abaixo <- (imc <= 18.5)
-ideal <- ((imc > 18.5) e (imc <= 24))
-acima <- (imc > 24)
-ob1 <- (imc > 30) e (imc <= 39.9)
-ob2 <- (imc > 35) e (imc <= 39.9)
-ob3 <- (imc >= 40)
+se((imc>18.5)e(imc<=24.9))entao
+escreval("Você está com o peso normal.")
+fimse
 
-escreval("Abaixo do peso:", abaixo)
-escreval("Peso ideal:", ideal)
-escreval("Acima do peso:", acima)
-escreval("Obesidade 1: ", ob1)
-escreval("Obesidade 2: ", ob2)
-escreval("Obesidade 3: ", ob3)
+se((imc>25)e(imc<=29.9))entao
+escreval("Você está com sobre peso.")
+fimse
 
+se((imc>30)e(imc<=34.9))entao
+escreval("Você está com obesidade de grau 1.")
+fimse
 
+se((imc>35)e(imc<=39.9))entao
+escreval("Você está com obesidade de grau 2.")
+fimse
 
-
-Fimalgoritmo
+fimalgoritmo
+© 2021 GitHub, Inc.

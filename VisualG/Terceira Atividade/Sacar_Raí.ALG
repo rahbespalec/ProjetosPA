@@ -2,24 +2,28 @@ Algoritmo "Saldo"
 
 // Autor(a)    : Raíssa Bespalec
 
-Var
-// Seção de Declarações das variáveis 
-saldo_inicial, valor_saque: real
-positivo,negativo: logico
+var
+saldoatual, saldofinal, restante, saque: real
 
-Inicio
-escreval("Qual valor você gostaria de sacar?")
-leia(valor_saque)
+inicio
+//Entrada
+escreval("Descubra se depois de sacar um determinado valor, como sua conta bancária ficará.")
+saldoatual <- 999999999
+escreval("Digite o valor do saque")
+leia(saque)
 
-saldo_inicial <- 1000000000
-valor_saque <- (saldo_inicial - valor_saque)
-positivo <- (valor_saque > 0)
-negativo <- (valor_saque = 0)
+saldofinal<-saldoatual-saque
 
-escreval("Seu saldo final é de",valor_saque)
-escreval("Saldo positivo: ",positivo)
-escreval("Saldo negativo: ",negativo)
-escreval("Obrigada pela atenção e tenha bons sonhos imaginando essa conta bancária!")
+se (saldofinal>=0) entao
+   escreval("O saldo final é positivo e o valor é de R$", saldofinal)
+senao
+     escreval("O saldo final é negativo e o valor é de R$", saldofinal)
+fimse
 
 
-Fimalgoritmo
+escreval("Obrigada pela atenção e tenha bons sonhos imaginando essa conta bancária <3!")
+
+fimalgoritmo
+
+
+

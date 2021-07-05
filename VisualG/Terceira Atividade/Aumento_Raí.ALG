@@ -2,43 +2,35 @@ Algoritmo "AUMENTO"
 // Disciplina   : Programação e Algoritmos
 // Professora   : Cintia Maria de Araujo Pinho
 // Autor(a)     : Raíssa Bespalec Dalóia
-Var
-   salario,aumento1,aumento2,aumento3:real
+var
+salario, aumento, salarioaumentado: real
 
+inicio
+//Entrada de Dados
+escreval("Aqui vamos informar o aumento salárial de um funcionário")
 
-Inicio
+escreval("Digite o seu salário.")
+leia(salario)
 
-   //Entrada
+se (salario<=1500) entao
+    aumento <- (salario*0.20)
+    salarioaumentado <- (salario+aumento)
+    escreval("O funcionário terá um aumento salarial de: ", aumento)
+    escreval("Portanto o salário futuro desse funcionário será de: ", salarioaumentado)
+fimse
 
-   escreval("Aumento")
+se ((salario>1500) e (salario<=3000)) entao
+    aumento <- (salario*0.15)
+    salarioaumentado <- (salario+aumento)
+    escreval("O funcionário terá um aumento salarial de: ", aumento)
+    escreval("Portanto o salário futuro desse funcionário será de: ", salarioaumentado)
+fimse
 
-   escreval("")
-   escreval("")
+se (salario>3000) entao
+    aumento <- (salario*0.10)
+    salarioaumentado <- (salario+aumento)
+    escreval("O funcionário terá um aumento salarial de: ", aumento)
+    escreval("Portanto o salário aumentado desse funcionário será de: ", salarioaumentado)
+fimse
 
-   escreval("Qual o seu salário em R$?")
-   leia(salario)
-
-   escreval("")
-
-   //Processamento
-
-   aumento1 <- (salario*1.20)
-
-   aumento2 <- (salario*1.15)
-
-   aumento3 <-(salario*1.10)
-
-   //Saída
-
-   se(salario <= 1500)entao
-      escreval("Seu aumento é de 20%, ou seja,", aumento1, "R$")
-   senao
-     se((salario <= 3000) e (salario >= 1500))entao
-        escreval("Seu aumento é de 15%, ou seja,", aumento2, "R$")
-     senao
-          escreval("Seu aumento é de 10%, ou seja,", aumento3, "R$")
-     fimse
-   fimse
-
-
-Fimalgoritmo
+fimalgoritmo
